@@ -6,7 +6,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class ProductPage{
+public class RegisterWhileCheckout{
 	WebDriver driver;
 	
 	@FindBy(id = "header")
@@ -18,7 +18,7 @@ public class ProductPage{
 	@FindBy(xpath = "//div[@class='product-information']")
 	WebElement Productdetails;
 	
-	public ProductPage(WebDriver driver) {
+	public RegisterWhileCheckout(WebDriver driver) {
 		this.driver = driver;
 		PageFactory.initElements(driver, this);
 	}

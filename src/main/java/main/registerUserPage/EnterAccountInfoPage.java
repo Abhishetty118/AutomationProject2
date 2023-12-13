@@ -1,5 +1,6 @@
 package main.registerUserPage;
 
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -78,7 +79,16 @@ public class EnterAccountInfoPage {
 		Password.sendKeys(pass);
 		Thread.sleep(5000);
 	}
+	public void scrollDown() {
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        js.executeScript("window.scrollBy(0, 500);"); 
+    }
 
+    public void performActionWithScrolling() {
+        
+        scrollDown();
+
+    }
 	public void selectDOB(String day, String month, String year) {
 		Select daySelect = new Select(DayDropdown);
 		daySelect.selectByVisibleText(day);
